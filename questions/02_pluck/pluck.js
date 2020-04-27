@@ -17,7 +17,13 @@ returns { a: 1, c: 42};
 */
 
 function pluck(obj, elements) {
-  // YOUR CODE
+  let newObj = {};
+  elements.forEach(function(elem) {
+    if (elem in obj) {
+      newObj[elem] = obj[elem];
+    }
+  })
+  return newObj;
 }
 
 module.exports = { pluck };
