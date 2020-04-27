@@ -1,7 +1,7 @@
 // This stretch requires you to write your own test cases
 
 const multiply = (num1, num2) => {
-    if (Array.from(arguments).length !== 2) throw 'need two numbers';
+    if (typeof num1 !== 'number' && typeof num2 !== 'number') throw new Error();
     return num1 * num2;
 };
 
