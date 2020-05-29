@@ -11,11 +11,11 @@
 Array.prototype.countBy = function(cb) {
     return this.reduce((a, b) => {
         if (cb) b = cb(b);
-        if (a[String(b)]) {
-            a[String(b)]++
+        if (a[b]) {
+            a[b]++
             return a;
         } else {
-            a[String(b)] = 1;
+            a[b] = 1;
             return a;
         }
     }, {})
