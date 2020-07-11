@@ -1,0 +1,20 @@
+// Write a function that takes an array and a target sum
+// This function should return an array of the target's sum pair or null if none found
+
+//ie:: twoNumberSum([3, -2, 7, 29, 12, -5, 8, 10], 3) => [-5, 8]
+
+//***Your solution should NOT include nested loops of any type***
+
+const twoNumberSum = (arr, sum) => {
+  
+  arr.forEach(arrayNum => {
+    const match = arr.find(num => (sum - arrayNum) === num)
+    console.log(match)
+    if (match !== undefined) {
+      return [arrayNum, match]
+    }
+    
+  })
+};
+
+module.exports = { twoNumberSum };
